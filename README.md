@@ -33,7 +33,7 @@ python simulation.py    # simulation for the past data
 
 1. The output will be displayed in the "../LazyML/output/".
 
-For daily.py, you can see "embedding plot", "summary_plot", "dependence_plot", "force_plot" "confusion_matrix" in "../LazyML/output/img/" and "metrics.csv", "actionability_output.csv" in "../LazyML/output/prediction/".
+For daily.py, you can see "embedding plot", "summary_plot", "dependence_plot", "force_plot" "confusion_matrix" in "../LazyML/output/img/" and "metrics.csv" in "../LazyML/output/prediction/".
 
 For simulation.py, you can see "simulation_plot" in "../LazyML/output/img/" and "Simulation.csv" in "../LazyML/output/prediction/".
 
@@ -41,17 +41,16 @@ For simulation.py, you can see "simulation_plot" in "../LazyML/output/img/" and 
 
 The exact meaning for each file is listed LazyML follows:
 
-|        File Name         |                            Usage                             |
-| :----------------------: | :----------------------------------------------------------: |
-|      embedding plot      |       Visualize the prediction and feature in 2D space       |
-|       summary_plot       |                 Check the feature importance                 |
-|     dependence_plot      |            Check the impact of a specific feature            |
-|        force_plot        | Check how the features impact the output of a feedback item  |
-|     confusion_matrix     |       Display the exact performance of the prediction        |
-|        metric.csv        | Display f1, recall, precision,accuracy, auc for the test set |
-| actionability_output.csv | Contain ID, score and binary prediction for each item sorted by score |
-|     simulation_plot      |   Plot the performance of the model within around 10 days    |
-|      simulation.csv      |  Record the performance of the model within around 10 days   |
+|    File Name     |                            Usage                             |
+| :--------------: | :----------------------------------------------------------: |
+|  embedding plot  |       Visualize the prediction and feature in 2D space       |
+|   summary_plot   |                 Check the feature importance                 |
+| dependence_plot  |            Check the impact of a specific feature            |
+|    force_plot    | Check how the features impact the output of a feedback item  |
+| confusion_matrix |       Display the exact performance of the prediction        |
+|    metric.csv    | Display f1, recall, precision,accuracy, auc for the test set |
+| simulation_plot  |   Plot the performance of the model within around 10 days    |
+|  simulation.csv  |  Record the performance of the model within around 10 days   |
 
 
 
@@ -545,8 +544,8 @@ cutoff: float, the thresholid to turn the probability into binary prediction
         
 Returns
 -------
-pred： Array, the probability of actionability
-pred_b: Array, binary prediction of actionability
+pred： Array, the probability 
+pred_b: Array, binary prediction 
 
 ```
 
@@ -895,7 +894,7 @@ Parameters
 -------
 y_true: array, the ground truth label
 y_pred: array, the prediction
-classes: list, assign the exact definitions of 0(non-actionable) and 1(actionable)
+classes: list, assign the exact definitions of 0(negative) and 1(positive)
 normalize: bool, whether to normalize the matrix
 title: string, title of the plot
 cmap: plt.cm, color mapping in matplotlib
