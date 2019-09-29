@@ -67,7 +67,7 @@ importlib.reload(LazyML)
 from LML import LazyML
 
 # set up an instance
-lml_ = AutoScrub()
+lml_ = LazyML()
 ```
 
 
